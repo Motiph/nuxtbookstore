@@ -3,6 +3,15 @@
 ## Build Setup
 
 ```bash
+# APIURL
+
+$ touch .env
+
+Set the API_URL=http://localhost:8000/api
+
+```
+
+```bash
 # install dependencies
 $ yarn install
 
