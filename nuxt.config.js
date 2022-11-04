@@ -42,10 +42,14 @@ export default {
     '@nuxtjs/axios',
   ],
 
+  env: {
+    API_URL: process.env.NODE_ENV === 'development' ?  'http://localhost:8000/api' : 'http://edwyn.pythonanywhere.com/api'
+  },
+
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    baseURL: process.env.API_URL,
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
@@ -66,6 +70,8 @@ export default {
       }
     }
   },
+
+
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
