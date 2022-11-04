@@ -43,7 +43,7 @@ export default {
   ],
 
   env: {
-    API_URL: process.env.NODE_ENV === 'development' ?  'http://localhost:8000/api' : 'http://edwyn.pythonanywhere.com/api'
+    API_URL: process.env.NODE_ENV === 'development' ?  'http://localhost:8000/api' : 'https://edwyn.pythonanywhere.com/api'
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
